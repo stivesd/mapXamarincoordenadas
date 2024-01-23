@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mymapubication.Views.MenuMajorPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Salir"
+                     Order="Primary"
+                     Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+    
+    <StackLayout>
+        <StackLayout HorizontalOptions="CenterAndExpand">
+            <Label Text="Mis direcciones" Margin="20,0,0,0" FontSize="20" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+
+        <StackLayout Margin="30,50,0,0" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand">
+            <Frame BackgroundColor="AliceBlue" >
+                <StackLayout HorizontalOptions="CenterAndExpand" >
+
+                    <Image Source="search" HeightRequest="75">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="Datos_Tapped"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                                          
+                    </Image>
+
+                    <Label FontAttributes="Bold" Text="Obtener coordenadas y direcciones"></Label>
+
+                    
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+
+        <StackLayout Margin="30,0,0,0" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand">
+            <Frame BackgroundColor="AliceBlue" >
+                <StackLayout HorizontalOptions="CenterAndExpand" >
+
+                  
+                    <Image Source="searcht" HeightRequest="75">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer  Tapped="Datos_Tapped_1"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+
+                    </Image>
+
+                    <Label FontAttributes="Bold" Text="Seguimiento en vivo de direcciones"></Label>
+
+
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
